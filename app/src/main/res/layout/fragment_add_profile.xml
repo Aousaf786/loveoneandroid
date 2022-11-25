@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.connaughttechnologies.lovedonce.ui.addprofile.AddProfileViewModel" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/layout_bg_home" />
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".ui.memorialsearch.MemorialSearchFragment">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        style="@style/ToolbarStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <include
+                            android:id="@+id/toolbar"
+                            layout="@layout/layout_toolbar" />
+                    </RelativeLayout>
+
+
+                    <TextView
+                        style="@style/MemorialSearchLbl"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/default_margin"
+                        android:text="NAME" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/SearchEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="First Name">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etFirstName"
+                            style="@style/DefaultEditText"
+                            android:layout_width="match_parent"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginEnd="@dimen/_8sdp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/SearchEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/etMiddleName"
+                            style="@style/DefaultEditText"
+                            android:layout_width="match_parent"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:layout_marginBottom="@dimen/_8sdp"
+                            android:hint="Middle Name" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/SearchEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/etLastName"
+                            style="@style/DefaultEditText"
+                            android:layout_width="match_parent"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:layout_marginBottom="@dimen/_8sdp"
+                            android:hint="Last Name" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        style="@style/MemorialSearchLbl"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/default_margin"
+                        android:text="BIRTH &amp; DEATH YEAR" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/default_margin"
+                        android:layout_marginEnd="@dimen/default_margin"
+                        android:layout_marginBottom="@dimen/default_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/spinnerInBirth"
+                            android:layout_width="@dimen/_48sdp"
+                            android:layout_height="@dimen/_38sdp"
+                            android:layout_marginEnd="@dimen/default_margin"
+                            android:background="@drawable/bg_stroke_rounded_bce0fd" />
+
+                        <TextView
+                            android:id="@+id/etBirth"
+                            style="@style/DefaultEditText"
+                            android:layout_width="match_parent"
+                            android:background="@drawable/bg_stroke_rounded_bce0fd"
+                            android:hint="Birth"
+                            android:paddingStart="@dimen/default_margin" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/default_margin"
+                        android:layout_marginEnd="@dimen/default_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/spinnerInDeath"
+                            android:layout_width="@dimen/_48sdp"
+                            android:layout_height="@dimen/_38sdp"
+                            android:layout_marginEnd="@dimen/default_margin"
+                            android:background="@drawable/bg_stroke_rounded_bce0fd" />
+
+                        <TextView
+                            android:id="@+id/etDeath"
+                            style="@style/DefaultEditText"
+                            android:layout_width="match_parent"
+                            android:background="@drawable/bg_stroke_rounded_bce0fd"
+                            android:hint="Death"
+                            android:paddingStart="@dimen/default_margin" />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/MemorialSearchLbl"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/default_margin"
+                        android:text="CEMETERY" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/spinnerCountry"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_38sdp"
+                            android:layout_margin="@dimen/default_margin"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_stroke_rounded_bce0fd" />
+
+                        <Spinner
+                            android:id="@+id/spinnerState"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_38sdp"
+                            android:layout_marginEnd="@dimen/default_margin"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_stroke_rounded_bce0fd" />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/MemorialSearchLbl"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/default_margin"
+                        android:text="Images" />
+
+                    <TextView
+                        android:id="@+id/tvBtnAddImages"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/default_margin"
+                        android:layout_marginEnd="@dimen/default_margin"
+                        android:layout_marginBottom="@dimen/default_margin_8"
+                        android:text="@string/add_images"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tvImages"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/default_margin"
+                        android:layout_marginEnd="@dimen/default_margin"
+                        android:textColor="@color/white"
+                        tools:text="memorial-img-162542050971935018.png,memorial-img-162542050971935018.png" />
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnAdd"
+                style="@style/DefaultButton"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/default_margin_8"
+                android:text="Add" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

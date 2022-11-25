@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Loved Ones</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="str_api_error">Something went wrong! Please try again later.</string>
+
+    <string name="str_login_error_email">Please enter email</string>
+    <string name="str_login_error_password">Please enter password</string>
+
+    <string name="str_sign_up_error_name">Please enter name</string>
+    <string name="str_sign_up_error_phone">Please enter valid phone</string>
+    <string name="str_sign_up_error_address">Please enter address</string>
+    <string name="str_sign_up_error_password">Please enter password</string>
+    <string name="str_sign_up_error_confirm_password">Please enter confirm password</string>
+    <string name="str_sign_up_error_password_match">Password and Confirm Password does not match</string>
+
+    <string name="str_payment_error_card">Please enter valid card number</string>
+    <string name="str_payment_error_exp">Please enter card expiry date</string>
+    <string name="str_payment_error_cvv">Please enter card cvv</string>
+
+    <string name="str_otp_error">Please enter OTP</string>
+
+    <string name="str_map_error">Please set location</string>
+    <string name="add_images"><u>Add Images</u></string>
+    <string name="default_notification_channel_id">com.connaughttechnologies.lovedonce</string>
+    <string name="default_notification_channel_name">Loved Ones</string>
+
+    <string-array name="country">
+        <item>Country</item>
+        <item>UK</item>
+    </string-array>
+
+    <string-array name="state">
+        <item>City</item>
+        <item>London</item>
+    </string-array>
+
+    <!--OnBoarding-->
+    <string name="on_boarding_page1">Create your lovedones Profile</string>
+    <string name="on_boarding_page2">Make orders for your lovedones</string>
+    <string name="on_boarding_page3">Donate to lovedones charity</string>
+</resources>

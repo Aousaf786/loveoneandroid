@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutContainer"
+    android:layout_width="@dimen/_132sdp"
+    android:layout_height="@dimen/_132sdp"
+    android:layout_marginBottom="@dimen/default_margin"
+    android:background="@drawable/bg_filled_corner_white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="@dimen/_22sdp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivProfile"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
+
+    <TextView
+        android:id="@+id/tvProfileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="Profile Name"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvProfileAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_profile_address"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/color_8F8F8F"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        tools:text="23 Live Oak St Dallas TX" />
+
+</LinearLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="sharedViewModel"
+            type="com.connaughttechnologies.lovedonce.base.SharedViewModel" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:onClick="@{()->sharedViewModel.onClickToolbarBack()}"
+            android:padding="@dimen/default_margin"
+            android:src="@drawable/ic_back_white" />
+
+        <TextView
+            android:id="@+id/tvToolbarTitle"
+            style="@style/ToolbarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Title"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+</layout>

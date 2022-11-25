@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.connaughttechnologies.lovedonce.ui.diary.DiaryViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/layout_bg_home" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".ui.diary.DiaryFragment">
+
+            <RelativeLayout
+                style="@style/ToolbarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include
+                    android:id="@+id/toolbar"
+                    layout="@layout/layout_toolbar" />
+
+            </RelativeLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/MemorialSearchLbl"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/default_margin"
+                        android:text="DAILY AFFIRMATION" />
+
+                    <EditText
+                        android:id="@+id/etDailyAffirmation"
+                        style="@style/DefaultEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/diary_edit_text_height"
+                        android:layout_marginStart="@dimen/default_margin"
+                        android:layout_marginEnd="@dimen/default_margin"
+                        android:background="@drawable/bg_stroke_rounded_8e8e8e"
+                        android:gravity="top"
+                        android:hint="Add daily affirmation..."
+                        android:imeOptions="actionDone"
+                        android:padding="@dimen/_8sdp"
+                        android:text="@={viewModel.obDailyAffirmation}"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/MemorialSearchLbl"
+                            android:layout_width="0dp"
+                            android:layout_marginTop="@dimen/default_margin"
+                            android:layout_marginEnd="@dimen/default_margin"
+                            android:layout_weight="1"
+                            android:text="CRITICAL TASKS" />
+
+                        <TextView
+                            style="@style/MemorialSearchLbl"
+                            android:layout_width="0dp"
+                            android:layout_marginTop="@dimen/default_margin"
+                            android:layout_weight="1"
+                            android:text="OTHERS"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/cbTask1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/diary_padding_start"
+                        android:text="Daily notes"
+                        android:textColor="@color/white" />
+
+                    <CheckBox
+                        android:id="@+id/cbTask2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/diary_padding_start"
+                        android:text="Memorial moments"
+                        android:textColor="@color/white" />
+
+                    <CheckBox
+                        android:id="@+id/cbTask3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/diary_padding_start"
+                        android:text="Thoughts and prayers"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        style="@style/MemorialSearchLbl"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/default_margin"
+                        android:text="NOTES" />
+
+                    <EditText
+                        android:id="@+id/etNotes"
+                        style="@style/DefaultEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/diary_edit_text_height"
+                        android:layout_marginStart="@dimen/default_margin"
+                        android:layout_marginEnd="@dimen/default_margin"
+                        android:background="@drawable/bg_stroke_rounded_8e8e8e"
+                        android:gravity="top"
+                        android:hint="Add notes..."
+                        android:padding="@dimen/_8sdp"
+                        android:text="@={viewModel.obNotes}" />
+
+                    <TextView
+                        style="@style/MemorialSearchLbl"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/default_margin"
+                        android:text="TODAY'S WINS" />
+
+                    <EditText
+                        android:id="@+id/etTodayWin"
+                        style="@style/DefaultEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/diary_edit_text_height"
+                        android:layout_marginStart="@dimen/default_margin"
+                        android:layout_marginEnd="@dimen/default_margin"
+                        android:background="@drawable/bg_stroke_rounded_8e8e8e"
+                        android:gravity="top"
+                        android:hint="Add today's wins..."
+                        android:padding="@dimen/_8sdp"
+                        android:text="@={viewModel.obTodayWins}" />
+
+                    <TextView
+                        style="@style/MemorialSearchLbl"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/default_margin"
+                        android:text="TO IMPROVE" />
+
+                    <EditText
+                        android:id="@+id/etToImprove"
+                        style="@style/DefaultEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/diary_edit_text_height"
+                        android:layout_marginStart="@dimen/default_margin"
+                        android:layout_marginEnd="@dimen/default_margin"
+                        android:layout_marginBottom="@dimen/default_margin"
+                        android:background="@drawable/bg_stroke_rounded_8e8e8e"
+                        android:gravity="top"
+                        android:hint="Improve..."
+                        android:padding="@dimen/_8sdp"
+                        android:text="@={viewModel.obImprove}" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnSave"
+                        style="@style/DefaultButton"
+                        android:layout_width="match_parent"
+                        android:layout_marginBottom="@dimen/default_margin_8"
+                        android:text="Save Changes" />
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

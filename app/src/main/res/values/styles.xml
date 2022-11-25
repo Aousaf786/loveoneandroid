@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.LovedOnce" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="android:colorPrimary">@color/colorPrimary</item>
+        <item name="android:colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:textColor">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@android:color/transparent</item>
+        <!-- Customize your theme here. -->
+        <item name="android:forceDarkAllowed">false</item>
+        <item name="otpViewStyle">@style/OtpWidget.OtpView</item>
+        <item name="android:colorControlNormal">@color/white</item>
+        <item name="android:colorControlActivated">@color/white</item>
+        <item name="android:colorControlHighlight">@color/white</item>
+        <item name="android:windowTranslucentStatus">true</item>
+
+    </style>
+
+    <!--default button-->
+    <style name="DefaultButton" parent="Widget.AppCompat.Button">
+        <item name="android:layout_height">@dimen/default_btn_height</item>
+        <item name="android:background">@drawable/bg_btn_default</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_margin">@dimen/_25sdp</item>
+    </style>
+
+    <!--default edit text-->
+    <style name="DefaultEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:layout_height">@dimen/default_edit_text_height</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/color_1B1C1E</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="android:paddingStart">@dimen/_20sdp</item>
+        <item name="android:paddingEnd">@dimen/_20sdp</item>
+    </style>
+
+
+    <style name="AuthContainer">
+        <item name="android:paddingTop">@dimen/auth_top</item>
+        <item name="android:paddingStart">@dimen/default_margin</item>
+        <item name="android:paddingEnd">@dimen/default_margin</item>
+        <item name="android:paddingBottom">@dimen/auth_bottom</item>
+    </style>
+
+    <style name="AuthTitle" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">34sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+
+    <style name="AuthDesc" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">17sp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="AuthEditText" parent="DefaultEditText">
+        <item name="android:background">@drawable/bg_auth_edittext</item>
+        <item name="colorAccent">@color/white</item>
+        <item name="hintTextColor">@color/color_1B1C1E</item>
+        <item name="android:textColorHint">@color/color_1B1C1E</item>
+        <item name="android:layout_marginBottom">@dimen/default_margin_8</item>
+    </style>
+
+    <style name="SearchEditText" parent="AuthEditText">
+        <item name="android:layout_marginStart">@dimen/_23sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_23sdp</item>
+    </style>
+
+    <style name="MainTitle" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="HomeMenu" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">15sp</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="ToolbarTitle" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="CheckoutTitle" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="CheckoutDesc" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/white</item>
+
+    </style>
+
+    <style name="PaymentLbl" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+
+    </style>
+
+    <style name="PaymentValue" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+
+    </style>
+
+    <style name="OrderStatusData" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/white</item>
+
+    </style>
+
+    <style name="DefaultEditText.Payment">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorHint">@color/white</item>
+
+    </style>
+
+    <style name="ScheduleBtn">
+        <item name="android:layout_height">@dimen/default_btn_height</item>
+        <item name="android:background">@drawable/bg_btn_default</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_marginTop">@dimen/default_margin</item>
+        <item name="android:layout_marginBottom">@dimen/_150sdp</item>
+    </style>
+
+    <style name="MemorialSearchLbl" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_marginBottom">@dimen/default_margin</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingStart">@dimen/_23sdp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingBottom">@dimen/_6sdp</item>
+        <item name="android:paddingTop">@dimen/_6sdp</item>
+    </style>
+
+    <style name="SubscriptionText" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">13sp</item>
+        <item name="android:drawablePadding">@dimen/default_margin</item>
+        <item name="android:layout_marginBottom">@dimen/default_margin</item>
+        <item name="android:drawableStart">@drawable/ic_subscription_tick</item>
+    </style>
+
+    <!--ImageView-->
+    <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
+        <item name="cornerSize">50%</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.CornerSize10Percent" parent="">
+        <item name="cornerSize">10%</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+
+    <style name="ToolbarStyle">
+        <item name="android:layout_marginTop">@dimen/_42sdp</item>
+        <item name="android:layout_marginStart">@dimen/_16sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_16sdp</item>
+    </style>
+
+    <style name="CalenderViewCustom" parent="Theme.AppCompat">
+        <item name="colorAccent">@color/white</item>
+        <item name="colorPrimary">@color/white</item>
+    </style>
+
+    <!--OnBoarding-->
+    <style name="OnBoardingButton" parent="Widget.AppCompat.Button">
+
+    </style>
+</resources>

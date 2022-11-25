@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.connaughttechnologies.lovedonce.ui.auth.signup.SignUpViewModel" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.auth.login.LoginFragment">
+
+        <RelativeLayout
+            style="@style/AuthContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/AuthDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/auth_desc_bottom"
+                    android:text="Sign up to continue" />
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/etFirstName"
+                                style="@style/AuthEditText"
+                                android:layout_width="0dp"
+                                android:layout_marginEnd="@dimen/_16sdp"
+                                android:layout_weight="1"
+                                android:hint="First name" />
+
+
+                            <EditText
+                                android:id="@+id/etLastName"
+                                style="@style/AuthEditText"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:hint="Last name"
+                                android:inputType="textEmailAddress" />
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/etEmail"
+                            style="@style/AuthEditText"
+                            android:layout_width="match_parent"
+                            android:hint="Email"
+                            android:inputType="textEmailAddress" />
+
+                        <EditText
+                            android:id="@+id/etPassword"
+                            style="@style/AuthEditText"
+                            android:layout_width="match_parent"
+                            android:hint="Password"
+                            android:inputType="textPassword" />
+
+                        <EditText
+                            android:id="@+id/etConfirmPassword"
+                            style="@style/AuthEditText"
+                            android:layout_width="match_parent"
+                            android:layout_marginBottom="@dimen/_40sdp"
+                            android:hint="Confirm Password"
+                            android:inputType="textPassword" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnSignUp"
+                            style="@style/DefaultButton"
+                            android:layout_width="match_parent"
+                            android:layout_margin="0dp"
+                            android:text="Sign up" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:layout_marginBottom="@dimen/_20sdp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="1dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/ic_separator_home" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:text="OR" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="1dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/ic_separator_home" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/layoutSignInGoogle"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/default_btn_height"
+                            android:layout_marginBottom="@dimen/_14sdp"
+                            android:background="@drawable/bg_btn_social_login">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/_40sdp"
+                                android:src="@drawable/img_google_sign_in" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="Sign in with Google"
+                                android:textSize="16sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/layoutSignInFacebook"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/default_btn_height"
+                            android:layout_marginBottom="@dimen/_20sdp"
+                            android:background="@drawable/bg_btn_social_login">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/_40sdp"
+                                android:src="@drawable/img_facebook_sign_in" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="Sign in with Facebook"
+                                android:textSize="16sp" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layoutLogin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/AuthDesc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Got an account? " />
+
+                            <TextView
+                                style="@style/AuthDesc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Log in"
+                                android:textColor="@color/colorPrimary" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </androidx.core.widget.NestedScrollView>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>

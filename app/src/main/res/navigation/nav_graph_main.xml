@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_main"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.connaughttechnologies.lovedonce.ui.home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_servicesFragment"
+            app:destination="@id/servicesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_orderStatusFragment"
+            app:destination="@id/orderStatusFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_memorialSearchFragment"
+            app:destination="@id/memorialSearchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/servicesFragment"
+        android:name="com.connaughttechnologies.lovedonce.ui.services.ServicesFragment"
+        android:label="ServicesFragment"
+        tools:layout="@layout/fragment_services">
+        <action
+            android:id="@+id/action_servicesFragment_to_servicesDetailsFragment"
+            app:destination="@id/servicesDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/servicesDetailsFragment"
+        android:name="com.connaughttechnologies.lovedonce.ui.details.ServicesDetailsFragment"
+        android:label="ServicesDetailsFragment"
+        tools:layout="@layout/fragment_services_details">
+        <action
+            android:id="@+id/action_servicesDetailsFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scheduleFragment"
+        android:name="com.connaughttechnologies.lovedonce.ui.schedule.ScheduleFragment"
+        android:label="ScheduleFragment"
+        tools:layout="@layout/fragment_schedule">
+        <action
+            android:id="@+id/action_scheduleFragment_to_mapFragment"
+            app:destination="@id/mapFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.connaughttechnologies.lovedonce.ui.map.MapFragment"
+        android:label="MapFragment"
+        tools:layout="@layout/fragment_map">
+        <action
+            android:id="@+id/action_mapFragment_to_checkoutFragment"
+            app:destination="@id/checkoutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkoutFragment"
+        android:name="com.connaughttechnologies.lovedonce.ui.checkout.CheckoutFragment"
+        android:label="CheckoutFragment"
+        tools:layout="@layout/fragment_checkout">
+        <action
+            android:id="@+id/action_checkoutFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.connaughttechnologies.lovedonce.ui.payment.PaymentFragment"
+        android:label="PaymentFragment"
+        tools:layout="@layout/fragment_payment">
+        <action
+            android:id="@+id/action_paymentFragment_to_successFragment"
+            app:destination="@id/successFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/successFragment"
+        android:name="com.connaughttechnologies.lovedonce.ui.success.SuccessFragment"
+        android:label="SuccessFragment"
+        tools:layout="@layout/fragment_success" />
+    <fragment
+        android:id="@+id/updateProfileFragment"
+        android:name="com.connaughttechnologies.lovedonce.ui.updateprofile.UpdateProfileFragment"
+        android:label="UpdateProfileFragment"
+        tools:layout="@layout/fragment_update_profile" />
+    <fragment
+        android:id="@+id/orderStatusFragment"
+        android:name="com.connaughttechnologies.lovedonce.ui.orderstatus.OrderStatusFragment"
+        android:label="OrderStatusFragment"
+        tools:layout="@layout/fragment_order_status" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.connaughttechnologies.lovedonce.ui.settings.SettingsFragment"
+        android:label="SettingsFragment"
+        tools:layout="@layout/fragment_settings">
+        <action
+            android:id="@+id/action_settingsFragment_to_updateProfileFragment"
+            app:destination="@id/updateProfileFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_additionalInfoFragment"
+            app:destination="@id/additionalInfoFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_reminderFragment"
+            app:destination="@id/reminderFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_addProfileFragment"
+            app:destination="@id/addProfileFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_myDiariesFragment"
+            app:destination="@id/myDiariesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.connaughttechnologies.lovedonce.ui.history.HistoryFragment"
+        android:label="HistoryFragment"
+        tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.connaughttechnologies.lovedonce.ui.chat.ChatFragment"
+        android:label="ChatFragment"
+        tools:layout="@layout/fragment_chat" />
+    <fragment
+        android:id="@+id/subscriptionsFragment"
+        android:name="com.connaughttechnologies.lovedonce.ui.subscriptions.SubscriptionsFragment"
+        android:label="SubscriptionsFragment"
+        tools:layout="@layout/fragment_subscriptions" />
+    <fragment
+        android:id="@+id/memorialSearchFragment"
+        android:name="com.connaughttechnologies.lovedonce.ui.memorialsearch.MemorialSearchFragment"
+        android:label="MemorialSearchFragment"
+        tools:layout="@layout/fragment_memorial_search">
+        <action
+            android:id="@+id/action_memorialSearchFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.connaughttechnologies.lovedonce.ui.profile.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_profileDetailFragment"
+            app:destination="@id/profileDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileDetailFragment"
+        android:name="com.connaughttechnologies.lovedonce.ui.profiledetail.ProfileDetailFragment"
+        android:label="ProfileDetailFragment"
+        tools:layout="@layout/fragment_profile_detail" />
+    <fragment
+        android:id="@+id/additionalInfoFragment"
+        android:name="com.connaughttechnologies.lovedonce.ui.additionalinfo.AdditionalInfoFragment"
+        android:label="AdditionalInfoFragment"
+        tools:layout="@layout/fragment_additional_info" />
+    <fragment
+        android:id="@+id/reminderFragment"
+        android:name="com.connaughttechnologies.lovedonce.ui.reminder.ReminderFragment"
+        android:label="ReminderFragment"
+        tools:layout="@layout/fragment_reminder" />
+    <fragment
+        android:id="@+id/diaryFragment"
+        android:name="com.connaughttechnologies.lovedonce.ui.diary.DiaryFragment"
+        android:label="DiaryFragment"
+        tools:layout="@layout/fragment_diary" />
+    <fragment
+        android:id="@+id/addProfileFragment"
+        android:name="com.connaughttechnologies.lovedonce.ui.addprofile.AddProfileFragment"
+        android:label="AddProfileFragment"
+        tools:layout="@layout/fragment_add_profile" />
+    <fragment
+        android:id="@+id/myDiariesFragment"
+        android:name="com.connaughttechnologies.lovedonce.ui.diaries.MyDiariesFragment"
+        android:label="MyDiariesFragment"
+        tools:layout="@layout/fragment_my_diaries">
+        <action
+            android:id="@+id/action_myDiariesFragment_to_diaryFragment"
+            app:destination="@id/diaryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.connaughttechnologies.lovedonce.ui.cart.CartFragment"
+        android:label="CartFragment"
+        tools:layout="@layout/fragment_cart" >
+        <action
+            android:id="@+id/action_cartFragment_to_scheduleFragment"
+            app:destination="@id/scheduleFragment" />
+    </fragment>
+</navigation>
