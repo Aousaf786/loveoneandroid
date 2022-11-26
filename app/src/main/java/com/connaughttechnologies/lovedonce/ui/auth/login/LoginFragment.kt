@@ -1,8 +1,12 @@
 package com.connaughttechnologies.lovedonce.ui.auth.login
 
+import android.graphics.Rect
 import android.os.Bundle
+import android.text.method.HideReturnsTransformationMethod
+import android.text.method.PasswordTransformationMethod
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
@@ -29,6 +33,23 @@ class LoginFragment : BaseFragment<LoginViewModel, FragmentLoginBinding>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.etPassword.setOnTouchListener { v, event ->
+            val action = event.action
+            if (action == MotionEvent.ACTION_UP) {
+                val rect = Rect()
+                binding.etPassword.getDrawingRect(rect)
+                val touch = rect.right - 100
+                if (event.x >= touch) {
+                    val method = binding.etPassword.transformationMethod
+                    if (method is PasswordTransformationMethod) {
+                        binding.etPassword.transformationMethod = HideReturnsTransformationMethod()
+                    } else {
+                        binding.etPassword.transformationMethod = PasswordTransformationMethod()
+                    }
+                }
+            }
+            false
+        }
         binding.btnSignIn.setOnClickListener {
             if (binding.etEmail.validateEmail()) {
                 if (binding.etPassword.validate()) {

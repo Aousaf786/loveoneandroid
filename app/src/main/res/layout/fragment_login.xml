@@ -43,6 +43,7 @@
                     android:id="@+id/etPassword"
                     style="@style/AuthEditText"
                     android:layout_width="match_parent"
+                    android:drawableEnd="@drawable/ic_password_toggle"
                     android:hint="Password"
                     android:inputType="textPassword" />
 
