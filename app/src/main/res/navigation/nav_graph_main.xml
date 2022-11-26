@@ -190,9 +190,14 @@
         android:id="@+id/cartFragment"
         android:name="com.connaughttechnologies.lovedonce.ui.cart.CartFragment"
         android:label="CartFragment"
-        tools:layout="@layout/fragment_cart" >
+        tools:layout="@layout/fragment_cart">
         <action
             android:id="@+id/action_cartFragment_to_scheduleFragment"
             app:destination="@id/scheduleFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/addPhotoFragment"
+        android:name="com.connaughttechnologies.lovedonce.ui.addphoto.AddPhotoFragment"
+        android:label="AddPhotoFragment"
+        tools:layout="@layout/fragment_add_photo" />
 </navigation>
