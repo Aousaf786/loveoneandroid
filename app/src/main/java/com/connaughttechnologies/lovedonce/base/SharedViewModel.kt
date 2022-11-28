@@ -88,6 +88,10 @@ class SharedViewModel : BaseViewModel() {
     fun onClickToolbarBack() {
         eventToolbarBackedClicked.call()
     }
+    val eventToolbarRightBtnClicked = SingleLiveEvent<Any>()
+    fun onClickToolbarRightButton() {
+        eventToolbarRightBtnClicked.call()
+    }
 
     //app permissions
     val eventPermissionCheckLocation = SingleLiveEvent<Any>()

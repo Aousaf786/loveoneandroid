@@ -14,8 +14,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <include layout="@layout/layout_bg_home" />
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -38,18 +36,6 @@
                     app:layout_constraintTop_toTopOf="parent" />
             </RelativeLayout>
 
-
-            <TextView
-                android:id="@+id/tvTitleHome"
-                style="@style/MainTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/home_content_top"
-                android:text="Select Service"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/toolbarContainer" />
-
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvServices"
                 android:layout_width="match_parent"
@@ -61,7 +47,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvTitleHome"
+                app:layout_constraintTop_toBottomOf="@+id/toolbarContainer"
                 app:spanCount="2"
                 tools:listitem="@layout/list_item_service" />
 

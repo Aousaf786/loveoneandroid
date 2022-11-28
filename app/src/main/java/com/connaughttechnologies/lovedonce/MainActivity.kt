@@ -194,6 +194,9 @@ class MainActivity : BaseActivity<MainViewModel, ActivityMainBinding>(), Purchas
         sharedViewModel.eventToolbarBackedClicked.observe(this, Observer {
             findNavController(R.id.nav_host_fragment).popBackStack()
         })
+        sharedViewModel.eventToolbarRightBtnClicked.observe(this, Observer {
+            //todo
+        })
 
         sharedViewModel.eventSharedShowLoading.observe(this, Observer {
             if (it)
