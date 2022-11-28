@@ -9,6 +9,7 @@ import com.connaughttechnologies.lovedonce.BR
 import com.connaughttechnologies.lovedonce.R
 import com.connaughttechnologies.lovedonce.base.BaseFragment
 import com.connaughttechnologies.lovedonce.databinding.FragmentHomeBinding
+import com.connaughttechnologies.lovedonce.ui.home.adapter.EventCardsAdapter
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 
@@ -18,8 +19,15 @@ class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>() {
     override var layoutId: Int = R.layout.fragment_home
     override var bindingVariable: Int = BR.viewModel
 
+    private lateinit var eventCardsAdapter: EventCardsAdapter
+
     override fun initViewModel() {
         binding.viewModel = viewModel
+    }
+
+    override fun onResume() {
+        super.onResume()
+        viewModel.getEventCards()
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -27,6 +35,9 @@ class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>() {
         lifecycleScope.launch {
             viewModel.init(repositoryPref.user.first())
         }
+
+        eventCardsAdapter = EventCardsAdapter()
+        binding.rvEventCards.adapter = eventCardsAdapter
 
         binding.ivChat.setOnClickListener {
             sharedViewModel.isGroupChat = false

@@ -7,7 +7,11 @@ class HomeViewModel : BaseViewModel() {
 
     lateinit var user: User
 
-    fun init(user: User){
+    fun init(user: User) {
         this.user = user
+    }
+
+    fun getEventCards() {
+        //todo
     }
 }
